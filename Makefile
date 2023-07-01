@@ -11,19 +11,23 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRCS = ft_printf.c
 
-OBJS = $(SRC: .c=.o)
+SRCS = ft_printf.c \
 
+OBJS = $(SRC:%.c=%.o)
+
+/*Compilador a utilizar*/
 CC = gcc
+
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 AR = ar crs
 
+all: $(NAME)
+
 $(NAME): $(OBJECTS)
 	$(AR) $(NAME) $(OBJS)
 
-all: $(NAME)
 
 %.o: %.c
 	$(CC) -c $(FLAGS) $?
