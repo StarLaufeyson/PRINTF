@@ -6,27 +6,44 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:22:49 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/06/29 19:25:23 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/07/07 17:36:13 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"ft_printf.h"
 
-void	ft_print_hex(unsigned int num)
+int	ft_print_hex(unsigned long long num, char c)
 {
-	if (num > 15)
-	{
-		ft_print_hex(num / 16);
-		ft_print_hex(num % 16);
-	}
-	else if (num < 10)
-		ft_printchar(num + '0');
-	else
-		ft_printchar(num - 10 + 'a');
-}
+	unsigned int	i;
 
+	i = 0;
+	if (num < 16)
+	{
+		if (c == 'x')
+		/*el uso de 'x' significa que deseas utilizar a, b, c, d, e y f xa representar los digitos hexadecimales. para ello se utilizará la cadena "0123456789abcdef" para obtener el digito hexadecimal correspondiente a 'n % 16'*/
+			i += ft_printchar("0123456789abcdef"[num % 16]);
+		else
+			i += ft_printchar("0123456789ABCDEF"[num % 16]);
+	}
+	else
+	{
+		i += ft_print_hex(num / 16, c);
+		if (c == 'x')
+			i += ft_printchar("0123456789abcdef"[num % 16]);
+		else
+			i += ft_printchar("0123456789ABCDEF"[num % 16]);
+	}
+	return (i);
+}
 int	main(void)
 {
-	ft_print_hex(255);
+	int		num;
+	char	c;
+	int		length_num;
+
+	num = 255;
+	c = 'x';
+	length_num = ft_print_hex(num, c);
+	/*ft_print_hex(255, c);*/
 	return (0);
 }
