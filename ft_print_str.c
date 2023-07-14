@@ -6,7 +6,7 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:52:11 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/07/14 18:54:00 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/07/14 19:14:32 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_print_str(char *str)
 	int	i;
 
 	i = 0;
-	if (str != 0)
+	if (str == NULL)
 		return (write(1, "404 not found", 13));
 	while (str[i] != '\0')
 	{
