@@ -18,6 +18,7 @@ SRCS = ft_printf.c \
 		ft_print_integer_unsig.c\
 		ft_print_str.c\
 		ft_printchar.c\
+		ft_print_pointer.c
 		ft_strlen.c
 
 OBJS = $(SRC:%.c=%.o)
