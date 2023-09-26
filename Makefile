@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: eluno-la <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/21 16:33:00 by eluno-la          #+#    #+#              #
-#    Updated: 2023/06/22 15:18:38 by eluno-la         ###   ########.fr        #
+#    Updated: 2023/09/26 18:44:28 by eluno-la         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRCS = ft_printf.c \
 		ft_print_integer_unsig.c\
 		ft_print_str.c\
 		ft_printchar.c\
-		ft_print_pointer.c
+		ft_print_pointer.c\
+		ft_printargs.c\
 		ft_strlen.c
 
 OBJS = $(SRC:%.c=%.o)

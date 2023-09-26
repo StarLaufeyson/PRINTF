@@ -6,12 +6,16 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:22:49 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/07/07 17:36:13 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/09/26 17:13:09 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"ft_printf.h"
 
+/*el uso de 'x' significa que deseas utilizar a, b, c, d, e y f
+		xa representar los digitos hexadecimales. para ello se utilizará 
+		la cadena "0123456789abcdef" para obtener el digito hexadecimal 
+		correspondiente a 'n % 16'*/
 int	ft_print_hex(unsigned long long num, char c)
 {
 	unsigned int	i;
@@ -20,7 +24,6 @@ int	ft_print_hex(unsigned long long num, char c)
 	if (num < 16)
 	{
 		if (c == 'x')
-		/*el uso de 'x' significa que deseas utilizar a, b, c, d, e y f xa representar los digitos hexadecimales. para ello se utilizará la cadena "0123456789abcdef" para obtener el digito hexadecimal correspondiente a 'n % 16'*/
 			i += ft_printchar("0123456789abcdef"[num % 16]);
 		else
 			i += ft_printchar("0123456789ABCDEF"[num % 16]);
@@ -35,6 +38,7 @@ int	ft_print_hex(unsigned long long num, char c)
 	}
 	return (i);
 }
+
 int	main(void)
 {
 	int		num;
@@ -44,6 +48,5 @@ int	main(void)
 	num = 255;
 	c = 'x';
 	length_num = ft_print_hex(num, c);
-	/*ft_print_hex(255, c);*/
 	return (0);
 }
