@@ -6,7 +6,7 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 19:22:49 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/09/26 17:13:09 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:55:50 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_print_hex(unsigned long long num, char c)
 	return (i);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int		num;
 	char	c;
@@ -49,4 +49,4 @@ int	main(void)
 	c = 'x';
 	length_num = ft_print_hex(num, c);
 	return (0);
-}
+}*/

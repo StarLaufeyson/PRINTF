@@ -6,7 +6,7 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:23:26 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/09/26 18:34:19 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:56:20 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_printargs(va_list args, const char c)
 	else if (c == 'x' || c == 'X')
 		len_arg += ft_print_hex(va_arg(args, unsigned int), c);
 	else if (c == 'p')
-		len_arg += ft_print_pointer((unsigned long)va_arg(args, void *));
+		len_arg += ft_print_pointer(NULL, va_arg(args, void *));
 	else if (c == '%')
 		len_arg += ft_printchar('%');
 	return (len_arg);
@@ -44,7 +44,7 @@ int	ft_printf(char const *str, ...)
 	i = 0;
 	len = 0;
 	if ((ft_strlen(str) == 1) && str[i] == '%')
-		return (len);
+		return (1);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%' && str[i + 1])
@@ -71,12 +71,7 @@ int	main(void)
 	c = 'O';
 	count1 = printf("%s \n", s);
 	printf("la función printf retorna %d\n", count1);
-	count1 = ft_printf("%s \n", s);
+	count2 = ft_printf("%s \n", s);
 	ft_printf("la función ft_printf retorna %d\n", count1);
 	return (0);
 }
-/*int	main(void)
-{
-	ft_printf("Hello, %s! The answer is %d.\n", "User", "printf", 42);
-	return (0);
-}*/

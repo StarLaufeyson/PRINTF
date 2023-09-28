@@ -6,29 +6,40 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:05:46 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/09/26 17:10:29 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:11:35 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_pointer(unsigned long long num)
+int	ft_print_pointer(const char *format, void *ptr)
 {
-	int	i;
-
-	i = 0;
-	i += ft_print_str("0x");
-	i += ft_print_hex(num, 'x');
-	return (i);
-}
-
-int	main(void)
-{
-	unsigned long long	ptr_value;
-	int					len;
-
-	ptr_value = (unsigned long long)0x7ffebc37ea1c;
-	len = ft_print_pointer(ptr_value);
-	printf("\nLa longitud total de caracteres impresos: %d\n", len);
+	if (format == NULL)
+	{
+		return (-1);
+	}
+	printf("Ptr value: %p\n", ptr);
+	printf("Ptr address: %p\n", &ptr);
 	return (0);
 }
+
+/*int	main(void)
+{
+	const char	*format;
+	int			value;
+	int			result;
+
+	format = "This is a format string";
+	value = 42;
+	printf("Calling ft_print_pointer with format string and integer pointer:\n");
+	result = ft_print_pointer(format, &value);
+	if (result == 0)
+	{
+		printf("ft_print_pointer executed succesfully.\n");
+	}
+	else
+	{
+		printf("ft_print_pointer encountered an error.\n");
+	}
+	return (0);
+}*/

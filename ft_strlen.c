@@ -6,7 +6,7 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 17:38:13 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/06/29 17:43:16 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:10:42 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlen(const char *str)
 
 /*int	main(void)
 {
-	char	str[] = "Happy Birthday Mr President"
+	char	str[] = "Happy Birthday Mr President";
 	printf("%zu\n", ft_strlen(str));
 	return (0);
 }*/

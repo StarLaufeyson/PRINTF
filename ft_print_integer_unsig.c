@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_integer_unsig.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eluno-la <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:19 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/07/07 17:48:42 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:12:00 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	ft_print_integer_unsig(unsigned int num)
 
 	num = 123456;
 	result = ft_print_integer_unsig(num);
-
 	printf("Number of digits: %d\n", result);
 	return (0);
 }*/
