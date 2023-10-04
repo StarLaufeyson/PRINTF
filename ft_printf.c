@@ -6,7 +6,7 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:23:26 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/09/28 18:56:20 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:39:48 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,18 @@ int	ft_printf(char const *str, ...)
 
 int	main(void)
 {
-	char	*s;
+	//char	*s;
+	int		i;
 	int		count1;
 	int		c;
 	int		count2;
 
-	s = "%";
+	i = -3;
+	//s = "%";
 	c = 'O';
-	count1 = printf("%s \n", s);
+	count1 = printf/*("%d \n", i)*/(" %d ", 10);
 	printf("la función printf retorna %d\n", count1);
-	count2 = ft_printf("%s \n", s);
+	count2 = ft_printf/*("%d \n", i)*/(" %d ", 10);
 	ft_printf("la función ft_printf retorna %d\n", count1);
 	return (0);
 }

@@ -6,47 +6,50 @@
 #    By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/21 16:33:00 by eluno-la          #+#    #+#              #
-#    Updated: 2023/09/26 18:44:28 by eluno-la         ###   ########.fr        #
+#    Updated: 2023/10/04 17:48:56 by eluno-la         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRCS = ft_printf.c \
+		ft_printchar.c\
 		ft_print_hex.c\
 		ft_print_integer.c\
 		ft_print_integer_unsig.c\
 		ft_print_str.c\
-		ft_printchar.c\
 		ft_print_pointer.c\
-		ft_printargs.c\
 		ft_strlen.c
 
-OBJS = $(SRC:%.c=%.o)
+#variable para archivos objeto .c y .o
+OBJS = $(SRCS:%.c=%.o)
 
-/*Compilador a utilizar*/
+#compilador a utilizar
 CC = gcc
 
+#variables para flags
 CFLAGS = -Wall -Werror -Wextra -I.
-RM = rm -rf
-AR = ar crs
 
+#funcion principal
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	$(AR) $(NAME) $(OBJS)
+#compilar librería
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
+#compilar con los flags
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
-%.o: %.c
-	$(CC) -c $(FLAGS) $?
-
+#Borrar objetos
 clean:
-	$(RM) $(OBJS)
+	@rm -f $(OBJS)
 
 #Borrar objetos y ejecutable
 fclean: clean
-	$(RM) $(NAME)
+	@rm -f $(NAME)
 
+#Borrar todo
 re: fclean alL
 
 #No crear archivos con estos nombres
