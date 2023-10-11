@@ -6,12 +6,12 @@
 /*   By: eluno-la <eluno-la@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:52:11 by eluno-la          #+#    #+#             */
-/*   Updated: 2023/10/04 19:26:42 by eluno-la         ###   ########.fr       */
+/*   Updated: 2023/10/05 18:34:29 by eluno-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"ft_printf.h"
-
+// //siempre en printf hemos comentar el null de esta forma
 int	ft_print_str(char *str)
 {
 	int	i;
