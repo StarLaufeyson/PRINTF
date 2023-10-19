@@ -60,6 +60,24 @@ int	ft_printf(char const *str, ...)
 	return (len);
 }
 
+int	main(void)
+{
+	unsigned long long	hex;
+	int			pointer;
+	char			*string;
+	char			c;
+	int			num2;
+	unsigned int		num;
+
+	hex = 255;
+	pointer = 0x345;
+	string = "hola";
+	c = 'x';
+	num2 = -430;
+	num = 4294967295;
+	ft_printf("%x, %p, %s, %c, %d, %u\n", hex, &pointer, string, num2, num);
+	printf("%llx, %p, %s, %c, %d, %u", hex, &pointer, string, num2, num);
+}
 /*int	main(void)
 {
 	//char	*s;
