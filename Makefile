@@ -50,7 +50,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 #Borrar todo
-re: fclean alL
+re: fclean all
 
 #No crear archivos con estos nombres
 .PHONY: all clean fclean re
